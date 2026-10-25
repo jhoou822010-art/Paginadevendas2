@@ -1,5 +1,5 @@
 const PRODUCT_PRICE = 'R$ 25,90';
-const CONTACT_EMAIL = 'melojonatha037@gmail.com';
+const CONTACT_EMAIL = 'jhoou822010@gmail.com';
 const WHATSAPP_NUMBER = '5543984539910';
 
 const menuToggle = document.querySelector('.menu-toggle');

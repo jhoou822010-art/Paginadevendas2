@@ -1,6 +1,6 @@
-const PRODUCT_PRICE = 'R$ 14,90';
+const PRODUCT_PRICE = 'R$ 25,90';
 const CONTACT_EMAIL = 'melojonatha037@gmail.com';
-const WHATSAPP_NUMBER = '5543996482559';
+const WHATSAPP_NUMBER = '5543984539910';
 
 const menuToggle = document.querySelector('.menu-toggle');
 const mainNav = document.querySelector('.main-nav');
@@ -26,6 +26,11 @@ document.querySelectorAll('.buy-button').forEach((button) => {
   });
 });
 
+document.querySelector('.second-ebook-button')?.addEventListener('click', () => {
+  const text = 'Olá! Tenho interesse em adquirir também o ebook “Do zero ao site publicado” por R$ 14,90. Vi a capa e as páginas de amostra e gostaria de saber como posso receber o material completo.';
+  window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`, '_blank', 'noopener');
+});
+
 const form = document.querySelector('#interestForm');
 const status = document.querySelector('#formStatus');
 form?.addEventListener('submit', (event) => {
@@ -36,7 +41,7 @@ form?.addEventListener('submit', (event) => {
   const whatsapp = String(data.get('whatsapp') || '').trim();
   if (!name || !email || !whatsapp) return;
   const message = String(data.get('message') || '').trim() || 'Quero comprar o ebook Engenharia de Software — Do Zero à Prática.';
-  const text = `Olá! Tenho interesse em comprar o ebook por R$ 14,90.\n\nNome: ${name}\nE-mail: ${email}\nWhatsApp: ${whatsapp}\n\nMensagem: ${message}`;
+  const text = `Olá! Tenho interesse em comprar o ebook por R$ 25,90.\n\nNome: ${name}\nE-mail: ${email}\nWhatsApp: ${whatsapp}\n\nMensagem: ${message}`;
   window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`, '_blank', 'noopener');
   status.textContent = 'O WhatsApp foi aberto com seu pedido preenchido. Agora é só tocar em Enviar.';
   form.reset();
